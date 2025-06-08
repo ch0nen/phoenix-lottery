@@ -1,0 +1,7 @@
+{
+  "phoenix_lotteri": [
+    { "handle": "tiktok_user1", "lotter": 5 },
+    { "handle": "awesome_creator", "lotter": 3 },
+    { "handle": "swedens_finest", "lotter": 8 }
+  ]
+}
