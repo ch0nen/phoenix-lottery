@@ -1,7 +1,25 @@
 {
   "phoenix_lotteri": [
-    { "handle": "tiktok_user1", "lotter": 5 },
-    { "handle": "awesome_creator", "lotter": 3 },
-    { "handle": "swedens_finest", "lotter": 8 }
+    { "handle": "𝙶𝚊𝚖𝚜𝟷.𝟶", "lotter": 4 },
+    { "handle": "👑QUEEN☠️GHOST👑", "lotter": 5 },
+    { "handle": "zabiinajonssoon", "lotter": 4 },
+    { "handle": "𝕀𝕩𝕖𝕝𝕒", "lotter": 3 },
+    { "handle": "Mattejuuu💥🍹🍕", "lotter": 2 },
+    { "handle": "Birte 🤠🌏🔥", "lotter": 2 },
+    { "handle": "ᒍOKEᖇ 🃏 ", "lotter": 2 },
+    { "handle": "𝓑𝓮𝓻𝓲𝓽✨⚓️", "lotter": 3 },
+    { "handle": "Fruitdr0p🍉🤠", "lotter": 4 },
+    { "handle": "💘 𐌉𝖣𝖠 💘", "lotter": 3 },
+    { "handle": "Sari", "lotter": 1 },
+    { "handle": "Jonte", "lotter": 1 },
+    { "handle": "King Ghost", "lotter": 1 },
+    { "handle": "Anders", "lotter": 1 },
+    { "handle": "Alexander", "lotter": 1 },
+    { "handle": "Ole", "lotter": 1 },
+    { "handle": "babbsan", "lotter": 1 },
+    { "handle": "Samantha", "lotter": 1 },
+    { "handle": "Anita", "lotter": 1 },
+    { "handle": "Queen Ghost", "lotter": 1 },
+    { "handle": "Lion Fighter", "lotter": 1 }
   ]
 }
