@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>Phoenix Lotteri</title>
+  <style>
+    body { font-family: sans-serif; background: #fefefe; max-width: 600px; margin: auto; padding: 2rem; }
+    h1 { text-align: center; font-size: 2rem; }
+    .entry { padding: 1rem; border-bottom: 1px solid #ddd; display: flex; justify-content: space-between; }
+    .entry span { font-weight: 600; }
+  </style>
+</head>
+<body>
+  <h1>🎟️ Phoenix Lotteri</h1>
+  <div id="listan">Laddar deltagare...</div>
+
+  <script>
+    fetch('data.json')
+      .then(response => response.json())
+      .then(data => {
+        const listan = document.getElementById('listan');
+        listan.innerHTML = '';
+        // Sortera: först flest lotter, sen alfabetiskt om lika många
+        data.phoenix_lotteri.sort((a, b) => {
+          if (b.lotter !== a.lotter) {
+            return b.lotter - a.lotter; // flest lotter först
+          } else {
+            return a.handle.localeCompare(b.handle); // alfabetisk
+          }
+        });
+        
+        data.phoenix_lotteri.forEach(person => {
+          const div = document.createElement('div');
+          div.className = 'entry';
+          div.innerHTML = `<span>@${person.handle}</span><span>${person.lotter} lotter</span>`;
+          listan.appendChild(div);
+        });
+      })
+      .catch(() => {
+        document.getElementById('listan').innerText = 'Kunde inte ladda data.';
+      });
+  </script>
+</body>
+</html>
