@@ -15,7 +15,7 @@
   <div id="listan">Laddar deltagare...</div>
 
   <script>
-    fetch('data.json')
+    fetch('data.json?_=' + new Date().getTime())
       .then(response => response.json())
       .then(data => {
         const listan = document.getElementById('listan');
