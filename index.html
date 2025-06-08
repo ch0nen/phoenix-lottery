@@ -12,12 +12,20 @@
 </head>
 <body>
   <h1>🎟️ Phoenix Lotteri</h1>
+  <div id="lotter-kvar" style="text-align: center; font-size: 1.2rem; margin-bottom: 1rem;"></div>
   <div id="listan">Laddar deltagare...</div>
 
   <script>
     fetch('data.json?_=' + new Date().getTime())
       .then(response => response.json())
       .then(data => {
+        const START_LOTTER = 200;
+        const totalUtdelade = data.phoenix_lotteri.reduce((sum, person) => sum + person.lotter, 0);
+        const kvar = START_LOTTER - totalUtdelade;
+
+        document.getElementById('lotter-kvar').innerText =
+          `🎟️ Utdelade: ${totalUtdelade} — Kvar: ${kvar >= 0 ? kvar : 0}`;
+
         const listan = document.getElementById('listan');
         listan.innerHTML = '';
         // Sortera: först flest lotter, sen alfabetiskt om lika många
